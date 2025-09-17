@@ -23,7 +23,7 @@ p {
 
     #ball-front {
       z-index: 3;
-      opacity: 0;
+      opacity: 1;
     }
 
     #ball-back {
