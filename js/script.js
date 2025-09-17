@@ -11,6 +11,10 @@ document.getElementById('clickMeButton').addEventListener('click', function() {
 
 
 function revealAnswer() {
+  const front = document.getElementById("ball-front");
+  const message = document.getElementById("message");
+  front.style.transition = "opacity 0s ease"
+  front.style.opacity = 1;
   const messages  = ["Når jeg kører, sigter jeg efter børnene",
 "12 år for et knald er en god investering",
 "Det er derfor man får børn!",
@@ -145,10 +149,7 @@ function revealAnswer() {
 "Now we want to say, ughhh",
 "der er mere yap i HCI end i hele min bachelor i idehistorie",];
 
-   
-      const front = document.getElementById("ball-front");
-      const message = document.getElementById("message");
-
+    
       // Pick random message
       const randomIndex = Math.floor(Math.random() * messages.length);
       const randomMessage = messages[randomIndex];
@@ -156,12 +157,10 @@ function revealAnswer() {
       // Set message text
       message.textContent = randomMessage;
 
-      // Fade out front image and fade in back image
-      front.style.opacity = 0;
-
-      // Reset after delay (optional)
+       //Reset after delay (optional)
       setTimeout(() => {
-        front.style.opacity = 1;
-      }, 8000); // 8 seconds
+        front.style.transition = "opacity 1s ease-in"
+        front.style.opacity = 0;
+      }, 100); // 100 miliseconds
   }
   
