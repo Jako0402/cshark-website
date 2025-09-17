@@ -11,7 +11,6 @@ document.getElementById('clickMeButton').addEventListener('click', function() {
 
 
 function revealAnswer() {
-  print("Hi");
   const messages  = ["Når jeg kører, sigter jeg efter børnene",
 "12 år for et knald er en god investering",
 "Det er derfor man får børn!",
