@@ -139,7 +139,14 @@ function revealAnswer() {
 "var diesel opfundet i 80'erne?",
 "We can remove the child from its parent",
 "Now we want to say, ughhh",
-"der er mere yap i HCI end i hele min bachelor i idehistorie",];
+"der er mere yap i HCI end i hele min bachelor i idehistorie",
+      "Jeg sidder bare her og er liderlig",
+  "Det min kusine..... hun er så bad",
+      "Kan man tage en lille eller stor barn?",
+  "Vil du gerne finde hullet? vent den er på den anden side",
+  "Den er lang, og den er også unødvendig lang",
+  "So for this lecture I have prepared nothing",
+  ];
 
     
       // Pick random message
