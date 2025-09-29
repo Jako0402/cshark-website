@@ -6,10 +6,6 @@ document.getElementById('clickMeButton').addEventListener('click', function() {
 
 
 
-
-
-
-
 function revealAnswer() {
   const front = document.getElementById("ball-front");
   const message = document.getElementById("message");

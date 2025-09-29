@@ -7,14 +7,15 @@
     <title>Cshark</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
+      <script src="./js/home.js" defer></script>
   </head>
   <body id="body">
-    <button class="homeButton">
-        <svg height="auto" width="auto" xmlns="http://www.w3.org/2000/svg">
-            <image height="90" width="125" href="Cshark.png" />
-        </svg>
-    </button>
     <div class="header">
+        <button id="homeButton", class="button">
+            <svg height="auto" width="auto" xmlns="http://www.w3.org/2000/svg">
+                <image height="90" width="125" href="Cshark.png" />
+            </svg>
+        </button>
         <span>Beep Boop I'm a header</span>
     </div>
     <div class ="main">
@@ -24,7 +25,7 @@
         <p>Hello</p>
         <img src="cShark-øl-min.jpg", width = 500>
         <script src="index.js"></script>
-        <div class="eightball-container" onclick="revealAnswer()">
+        <div class="eightball-container", class="button" onclick="revealAnswer()">
             <img id="ball-front" src="8ballBlank.png" alt="Eight Ball Front">
             <img id="ball-back" src="8ballAwnser.png" alt="Eight Ball Back">
             <div class="message" id="message">"This is a relativly long message to test the croping"</div>
