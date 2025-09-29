@@ -1,10 +1,12 @@
 h1 {
     color: var(--base-colour);
+    font-weight: bold;
 }
 :root{
     --base-colour: rgb(22,106,155);
     --black-colour: rgb(0,0,0);
     --white-colour: rgb(255,255,255);
+    font-family: arial;
 }
 
 p {
@@ -55,7 +57,43 @@ p {
     cursor: pointer;
 }
 
+.navBar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.navBar a{
+    color: var(--white-colour);
+    text-decoration: none;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.navBar a:hover{
+    border-bottom: 2px solid var(--white-colour);
+}
+
+.navBar li{
+    float: left;
+}
+
+.container{
+    border-bottom: 2px solid var(--white-colour);
+}
+
+
+
+
+
 .eightball-container {
+    margin-top: 50px;
       position: relative;
       width: 500px;
       height: 500px;

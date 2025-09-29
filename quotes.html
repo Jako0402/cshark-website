@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cshark</title>
     <link rel="stylesheet" href="./css/style.css">
-      <script src="js/home.js" defer></script>
+    <script src="js/quotes.js" defer></script>
   </head>
   <body id="body">
     <div class="header">
@@ -17,7 +17,7 @@
         </button>
         <nav class="navBar">
             <ul>
-                <li><a href="quotes.html" class="button">Citater</a></li>
+                <li><a href="quotes.html" class="button" class="currentPage">Citater</a></li>
                 <li><a href="" class="button">TBD</a></li>
                 <li><a href="" class="button">TBD</a></li>
                 <li><a href="" class="button">TBD</a></li>
@@ -25,12 +25,13 @@
         </nav>
     </div>
     <div class ="main">
-        <h1>Hej...cshark her</h1>
-        <p>web design is my passion</p>
-        <button id="clickMeButton">Click Me!</button>
-        <p>Hello</p>
-        <img src="cShark-øl-min.jpg", width = 500>
-        <script src="index.js"></script>
+        <h1>Citater </h1>
+        <p>Klik på den mystiske 8 ball for at høre dens vise ord</p>
+        <div class="eightball-container" class="button" onclick="revealAnswer()">
+            <img id="ball-front" src="8ballBlank.png" alt="Eight Ball Front">
+            <img id="ball-back" src="8ballAwnser.png" alt="Eight Ball Back">
+            <div class="message" id="message">"This is a relativly long message to test the croping"</div>
+        </div>
     </div>
   </body>
 </html>
