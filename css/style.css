@@ -1,12 +1,13 @@
-h1 {
-    color: var(--base-colour);
-    font-weight: bold;
-}
 :root{
     --base-colour: rgb(22,106,155);
     --black-colour: rgb(0,0,0);
     --white-colour: rgb(255,255,255);
     font-family: arial;
+}
+
+h1 {
+    color: var(--base-colour);
+    font-weight: bold;
 }
 
 p {
