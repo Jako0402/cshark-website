@@ -1,0 +1,43 @@
+
+
+
+
+#bingoBody{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: smaller;
+
+    margin-bottom: 100px;
+    padding: 2px;
+
+    width: 550px;
+    height: 550px;
+
+    background-color: rgb(13, 85, 127);
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.bingoCell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    background-color: #1b74a7;
+    color: white;
+
+    border-radius: 2px;
+    margin: 4px;
+    padding: 4px;
+}
+
+.activeCell{
+    background-color:#c5e1ff;
+    color: #002d47;
+}
