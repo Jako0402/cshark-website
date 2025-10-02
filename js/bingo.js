@@ -28,7 +28,8 @@ const messages  = [
     "Someone drops something",
     "Shows a video",
     "Useless slides (Just pictures)",
-    "Lecturer adjusts microphone"
+    "Lecturer adjusts microphone",
+    "Clemens starts casually talking to Niklas during the lecture"
 ];
 
 
