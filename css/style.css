@@ -10,10 +10,6 @@ h1 {
     font-weight: bold;
 }
 
-p {
-  color: var(--black-colour);
-}
-
 #body{
     display: grid;
     grid-template-columns: 1fr;
@@ -24,6 +20,7 @@ p {
     grid-column-gap: 0;
     grid-row-gap: 0;
     box-sizing: border-box;
+    color: var(--black-colour);
 }
 
 #homeButton{
@@ -153,3 +150,30 @@ p {
       z-index: 2;
       pointer-events: none;
     }
+
+#box-wrapper {
+    width: 600px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 180px);
+    grid-template-rows: repeat(5, 180px);
+    grid-auto-flow: column;
+}
+
+.box {
+    background-color: lightgrey;
+    color: var(--black-colour);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 100%;
+    word-wrap: break-word;
+}
+
+.pressed {
+    background-color: var(--base-colour);
+    color: var(--white-colour);
+}
+
+.box > * {
+    pointer-events: none;
+}
