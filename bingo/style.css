@@ -29,8 +29,8 @@
 
     cursor: pointer;
 
-    background-color: #1b74a7;
-    color: white;
+    background-color: #dceafa;
+    color: #002d47;
 
     border-radius: 2px;
     margin: 4px;
@@ -38,6 +38,7 @@
 }
 
 .activeCell{
-    background-color:#c5e1ff;
-    color: #002d47;
+    background-color: #1b74a7;
+    color: white;
+    text-decoration: line-through;
 }
