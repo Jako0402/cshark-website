@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../assets/Cshark-text.png" type="image/x-icon">
@@ -7,39 +8,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bingo</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/bingo.js" defer></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
-<div class="header">
-    <div class="topHeader">
-        <br>
-        <button id="homeButton" class="button">
-            <svg height="90" width="125" xmlns="http://www.w3.org/2000/svg">
-                <image height="90" width="125" href="../assets/Cshark.png" />
-            </svg>
-        </button>
-    </div>
-    <div class="botHeader">
-        <br>
-        <nav class="navBar">
-            <ul>
-                <li><a href="../citater" class="button">Citater</a></li>
-                <li><a href="https://www.youtube.com/shorts/Ay8lynMZ4mE" class="button">Bangers</a></li>
-                <li><a href="../bingo" class="button">HCI Bingo</a></li>
-                <li><a href="" class="button">[Ingen ide]</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
-<div class ="main">
-    <br>
-    <div class="contentPane">
-        <h1>HCI lecture bingo </h1>
-        <p>Click on a box when it has happened during the lecture (Warning, nothing will be saved, so please don't reload or close the tab</p>
-            <div id="box-wrapper">
-            </div>
-    </div>
-</div>
-</body>
-</html>
 
+<body id="body">
+    <div class="header">
+        <div class="topHeader">
+            <br>
+            <button id="homeButton" class="button">
+                <svg height="90" width="125" xmlns="http://www.w3.org/2000/svg">
+                    <image height="90" width="125" href="../assets/Cshark.png" />
+                </svg>
+            </button>
+        </div>
+        <div class="botHeader">
+            <br>
+            <nav class="navBar">
+                <ul>
+                    <li><a href="../citater" class="button">Citater</a></li>
+                    <li><a href="https://www.youtube.com/shorts/Ay8lynMZ4mE" class="button">Bangers</a></li>
+                    <li><a href="../bingo" class="button">HCI Bingo</a></li>
+                    <li><a href="" class="button">[Ingen ide]</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="main">
+        <br>
+        <div class="contentPane">
+            <h1>HCI lecture bingo </h1>
+            <p>Click on a box when it has happened during the lecture (Warning, nothing will be saved, so please don't reload or close the tab)</p>
+
+                    <div id="bingoBody">
+                
+                    </div>
+
+                </div>
+                <script>
+                    // Grab the container div
+                    const bingoBody = document.getElementById("bingoBody");
+
+                    // Add event listener for click events
+                    bingoBody.addEventListener("click", (event) => {
+                        // Find the clicked child element (only if it's a direct child of bingoBody)
+                        const clickedElement = event.target.closest("#bingoBody > *");
+
+                        if (clickedElement && bingoBody.contains(clickedElement)) {
+                            // Get the index of the clicked child
+                            const children = Array.from(bingoBody.children);
+                            const index = children.indexOf(clickedElement);
+
+                            if (index != 12) clickedElement.classList.toggle("activeCell");
+                        }
+                    });
+                </script>
+
+        </div>
+    </div>
+</body>
