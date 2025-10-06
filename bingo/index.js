@@ -29,7 +29,7 @@ function newBingoCard(text, active){
 // Bingo Cards
 let bingoCards = [
     "Apple mentioned",
-    "Clemens mentions one of his devices",
+    "Niklas mentions one of his devices",
     "Video games mentioned",
     "Steve Jobs mentioned",
     "Lecturer gets eye contact with C-Shark",
@@ -39,22 +39,25 @@ let bingoCards = [
     "Lecturer yaps about something irrelevant to the topic",
     "Both lecturers speaks at the lecture",
     "Student goes on an irrelevant tangent",
+    "Niklas wears his white glasses",
     "A student falls asleep",
     "Someone leaves during the lecture",
     "Someone is gaming in the audience",
     "Dat6 does loldle.net",
     "Notification sound",
     "Disagreement between lecturer and audience",
-    "'what?'",
+    "'What?'",
     "Awkward silence after lecturer asks question",
     "Someone drops something",
     "Shows a video",
     "Useless slides (Just pictures)",
-    "Clemens wears his white glasses",
-    "Clemens starts casually talking to Niklas during the lecture"
+    "Lecturer adjusts microphone",
+    "Clemens starts casually talking to Niklas during the lecture",
+    "Clemens scratches his beard",
+    "Someone answers a question with an annoying british accent"
 ];
 
-let centerBingo = "Lecturer adjusts microphone";    
+let centerBingo = "The lecturer speaks for too long";
 
 
 shuffle(bingoCards);

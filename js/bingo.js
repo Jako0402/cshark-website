@@ -23,13 +23,15 @@ const messages  = [
     "Dat6 does loldle.net",
     "Notification sound",
     "Disagreement between lecturer and audience",
-    "'what?'",
+    "'What?'",
     "Awkward silence after lecturer asks question",
     "Someone drops something",
     "Shows a video",
     "Useless slides (Just pictures)",
     "Lecturer adjusts microphone",
-    "Clemens starts casually talking to Niklas during the lecture"
+    "Clemens starts casually talking to Niklas during the lecture",
+    "Clemens scratches his beard",
+    "Someone answers a question with an annoying british accent"
 ];
 
 
@@ -52,8 +54,6 @@ for (let i = 0; i < 25; i++) {
         e.target.classList.toggle("pressed");
     })
 }
-
-
 
 // https://www.geeksforgeeks.org/javascript/how-to-shuffle-the-elements-of-an-array-in-javascript/
 function shuffleArray(arr) {

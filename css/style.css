@@ -1,7 +1,9 @@
 :root{
     --base-colour: rgb(22,106,155);
-    --black-colour: rgb(0,0,0);
+    --text-colour: rgb(0,0,0);
+    --background-colour: rgb(255,255,255);
     --white-colour: rgb(255,255,255);
+    --line-colour: rgb(205,213,220);
     font-family: arial;
 }
 
@@ -20,7 +22,8 @@ h1 {
     grid-column-gap: 0;
     grid-row-gap: 0;
     box-sizing: border-box;
-    color: var(--black-colour);
+    background-color: var(--background-colour);
+    color: var(--text-colour);
 }
 
 #homeButton{
@@ -47,7 +50,7 @@ h1 {
 }
 
 .topHeader{
-    background-color: var(--white-colour);
+    background-color: var(--background-colour);
     border-top: 0.6vh solid var(--base-colour);
     display: grid;
     grid-template-columns: 1fr 172vh 1fr;
@@ -57,6 +60,7 @@ h1 {
 }
 
 .botHeader{
+    color: var(--white-colour);
     display: grid;
     grid-template-columns: 1fr 172vh 1fr;
     grid-template-rows: 1fr;
@@ -65,7 +69,7 @@ h1 {
 }
 
 .main{
-    background-color: var(--white-colour);
+    background-color: var(--background-colour);
     display: grid;
     grid-template-columns: 1fr 172vh 1fr;
     grid-template-rows: 1fr;
@@ -124,6 +128,50 @@ h1 {
     border-bottom: 2px solid var(--white-colour);
 }
 
+.contentPaneSplit{
+    display: grid;
+    grid-template-columns: 45vh 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.contentPane{
+    margin-left: 25px;
+}
+
+.sideBar{
+    height: auto;
+    border-right: 1px solid var(--line-colour);
+}
+
+.sideBar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2.5vh;
+    overflow: hidden;
+}
+
+.sideBar a{
+    color: var(--text-colour);
+    text-decoration: none;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.sideBar a:hover{
+    border-left: 2px solid var(--base-colour);
+}
+
+.navBar li{
+    float: left;
+}
 
 
 .eightball-container {
@@ -160,7 +208,7 @@ h1 {
       transform: translate(-50%, -50%);
       text-align: center;
       font-size: 20px;
-      color: var(--white-colour);
+      color: var(--background-colour);
       z-index: 2;
       pointer-events: none;
     }
@@ -176,7 +224,7 @@ h1 {
 
 .box {
     background-color: lightgrey;
-    color: var(--black-colour);
+    color: var(--text-colour);
     border-radius: 5px;
     padding: 10px;
     font-size: 100%;
@@ -185,7 +233,7 @@ h1 {
 
 .pressed {
     background-color: var(--base-colour);
-    color: var(--white-colour);
+    color: var(--background-colour);
 }
 
 .box > * {
