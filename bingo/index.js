@@ -50,11 +50,11 @@ let bingoCards = [
     "Someone drops something",
     "Shows a video",
     "Useless slides (Just pictures)",
-    "Lecturer adjusts microphone",
+    "Clemens wears his white glasses",
     "Clemens starts casually talking to Niklas during the lecture"
 ];
 
-let centerBingo = "Clemens wears his white glasses";    
+let centerBingo = "Lecturer adjusts microphone";    
 
 
 shuffle(bingoCards);

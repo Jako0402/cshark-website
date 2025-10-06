@@ -1,6 +1,6 @@
 // Test
 document.getElementById('clickMeButton').addEventListener('click', function() {
-    alert('Bruh!!');
+    alert('Bruh!!, you just lost the game');
 });
 
 document.getElementById('homeButton').addEventListener('click', function(){
