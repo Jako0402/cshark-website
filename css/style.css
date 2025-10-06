@@ -3,6 +3,7 @@
     --text-colour: rgb(0,0,0);
     --background-colour: rgb(255,255,255);
     --white-colour: rgb(255,255,255);
+    --line-colour: rgb(205,213,220);
     font-family: arial;
 }
 
@@ -113,6 +114,50 @@ h1 {
     border-bottom: 2px solid var(--white-colour);
 }
 
+.contentPaneSplit{
+    display: grid;
+    grid-template-columns: 45vh 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.contentPane{
+    margin-left: 25px;
+}
+
+.sideBar{
+    height: auto;
+    border-right: 1px solid var(--line-colour);
+}
+
+.sideBar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2.5vh;
+    overflow: hidden;
+}
+
+.sideBar a{
+    color: var(--text-colour);
+    text-decoration: none;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.sideBar a:hover{
+    border-left: 2px solid var(--base-colour);
+}
+
+.navBar li{
+    float: left;
+}
 
 
 .eightball-container {

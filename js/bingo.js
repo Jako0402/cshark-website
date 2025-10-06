@@ -55,8 +55,6 @@ for (let i = 0; i < 25; i++) {
     })
 }
 
-
-
 // https://www.geeksforgeeks.org/javascript/how-to-shuffle-the-elements-of-an-array-in-javascript/
 function shuffleArray(arr) {
     arr.sort(function (a, b) {
