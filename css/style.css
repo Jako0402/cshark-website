@@ -4,7 +4,8 @@
     --background-colour: rgb(255,255,255);
     --white-colour: rgb(255,255,255);
     --line-colour: rgb(205,213,220);
-    font-family: arial;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 h1 {
@@ -14,8 +15,9 @@ h1 {
 
 #body{
     display: grid;
+    min-height: 100dvh;
     grid-template-columns: 1fr;
-    grid-template-rows: 22.5vh 1fr;
+    grid-template-rows: 156px 1fr;
     border:none;
     margin: 0;
     padding: 0;
@@ -44,38 +46,35 @@ h1 {
     text-align: left;
     border: none;
     display: grid;
-    box-shadow: 0px 0 10px 1px var(--black-colour);
+    box-shadow: 0 0 10px 1px var(--black-colour);
     grid-template-columns: 1fr;
-    grid-template-rows: 14vh 7vh;
+    grid-template-rows: 94px 1fr;
 }
 
 .topHeader{
     background-color: var(--background-colour);
-    border-top: 0.6vh solid var(--base-colour);
+    border-top: 4px solid var(--base-colour);
     display: grid;
-    grid-template-columns: 1fr 172vh 1fr;
+    grid-template-columns: 1fr 1170px 1fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+
 }
 
 .botHeader{
     color: var(--white-colour);
     display: grid;
-    grid-template-columns: 1fr 172vh 1fr;
+    grid-template-columns: 1fr 1170px 1fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+
 }
 
 .main{
     background-color: var(--background-colour);
     display: grid;
-    grid-template-columns: 1fr 172vh 1fr;
+    grid-template-columns: 1fr 1170px 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    margin-left: 30px;
 }
 
 .button{
@@ -86,7 +85,7 @@ h1 {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-top: 2.5vh;
+    margin-top: 17px;
     overflow: hidden;
 }
 
@@ -94,10 +93,8 @@ h1 {
     color: var(--white-colour);
     text-decoration: none;
     display: block;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 23px;
     padding-bottom: 5px;
-    margin-left: 10px;
     text-align: center;
     font-size: 20px;
     border-bottom: 2px solid var(--base-colour);
@@ -106,9 +103,9 @@ h1 {
 .subNavBar a{
     border-bottom: 2px solid var(--white-colour);
     color: var(--black-colour);
-    padding-top: 20px;
-     padding-left: 10px;
-     padding-right: 10px;
+    padding-top: 15px;
+    margin-right: 20px;
+    padding-right: 20px;
     font-size: 15px;
 }
 
@@ -130,14 +127,14 @@ h1 {
 
 .contentPaneSplit{
     display: grid;
-    grid-template-columns: 45vh 1fr;
+    grid-template-columns: 305px 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
 .contentPane{
-    margin-left: 25px;
+    /* margin-left: 111px; <----------- We need a different pane for this one, cause else, when no side bar... uh oh :) */
 }
 
 .sideBar{
