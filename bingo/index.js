@@ -54,7 +54,9 @@ let bingoCards = [
     "Lecturer adjusts microphone",
     "Clemens starts casually talking to Niklas during the lecture",
     "Clemens scratches his beard",
-    "Someone answers a question with an annoying british accent"
+    "Someone answers a question with an annoying british accent",
+    "Picture of a Cow",
+    "'here is a paper I/We worked on'"
 ];
 
 let centerBingo = "The lecturer speaks for too long";
