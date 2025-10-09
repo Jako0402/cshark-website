@@ -56,7 +56,16 @@ let bingoCards = [
     "Clemens scratches his beard",
     "Someone answers a question with an annoying british accent",
     "Picture of a Cow",
-    "'here is a paper I/We worked on'"
+    "'here is a paper I/We worked on'",
+    "No one raises thier hand when lecturer asks a question",
+    "Someone has their head on the table", 
+    "The same student answers three questions in a row",
+    "Name-drops",
+    "The slides are just an image",
+    "PowerPoint with 30+ slides",
+    "He hints that a student should stop talking",
+    "Bloons/Snake is being played",
+    "He elaborates on something he’s already elaborated on in three previous lectures"
 ];
 
 let centerBingo = "The lecturer speaks for too long";
