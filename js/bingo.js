@@ -72,7 +72,7 @@
     shuffle(bingoCards);
 
     bingoCards.splice(12, 0, centerBingo);
-
+    
     for (let i = 0; i < 25; i++) {
         let isCenterSquare = (i == 12);
         newBingoCard(bingoCards[i], isCenterSquare);

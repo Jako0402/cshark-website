@@ -18,6 +18,25 @@ const routes = {
     js: "js/bingo.js",
     css: "css/bingo.css"
   },
+  "/flashcards": {
+    html: "/pages/flashcards.html",
+    title: "Flashcards",
+    description: "Se vores smukke flashcards!",
+    js: "js/flashcards.js",
+    css: "css/flashcards.css"
+  },
+  "/sange": {
+    html: "/pages/sange.html",
+    title: "Sange",
+    js: "js/sange.js",
+    description: "Se vores smukke sange!",
+  },
+  "/auth": {
+    html: "/pages/auth.html",
+    title: "Auth test",
+    js: "js/auth.js",
+    description: "Se vores smukke login!",
+  },
 };
 
 async function loadPage(path) {
