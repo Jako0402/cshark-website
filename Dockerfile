@@ -1,7 +1,12 @@
-FROM nginx:alpine
+FROM node:alpine
 
-COPY ./ /usr/share/nginx/html/
+WORKDIR /app
+
+COPY ./ /app
+
+RUN npm install -g serve
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+# Run SPA in "single-page" mode
+CMD ["serve", "-s", ".", "-l", "80"]
