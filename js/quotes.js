@@ -158,20 +158,3 @@ function revealAnswer() {
     front.style.opacity = 0;
   }, 100); // 100 miliseconds
 }
-
-// Grab the container div
-const bingoBody = document.getElementById("bingoBody");
-
-// Add event listener for click events
-bingoBody.addEventListener("click", (event) => {
-  // Find the clicked child element (only if it's a direct child of bingoBody)
-  const clickedElement = event.target.closest("#bingoBody > *");
-
-  if (clickedElement && bingoBody.contains(clickedElement)) {
-    // Get the index of the clicked child
-    const children = Array.from(bingoBody.children);
-    const index = children.indexOf(clickedElement);
-
-    if (index != 12) clickedElement.classList.toggle("activeCell");
-  }
-});
