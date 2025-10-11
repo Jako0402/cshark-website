@@ -1,63 +1,97 @@
-document.getElementById('homeButton').addEventListener('click', function(){
-    window.location.href = 'https://cshark.dk/';
-});
+(function () {
+    function shuffle(array) {
+        let currentIndex = array.length;
 
-let table = document.querySelector("#box-wrapper");
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+            // Pick a remaining element...
+            let randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
 
-const messages  = [
-    "Apple mentioned",
-    "Clemens mentions one of his devices",
-    "Video games mentioned",
-    "Steve Jobs mentioned",
-    "Lecturer gets eye contact with C-Shark",
-    "AI generated image",
-    "'Look at what you can do with AI!'",
-    "'Uuuhhhh'",
-    "Lecturer yaps about something irrelevant to the topic",
-    "Both lecturers speaks at the lecture",
-    "Student goes on an irrelevant tangent",
-    "Clemens wears his white glasses",
-    "A student falls asleep",
-    "Someone leaves during the lecture",
-    "Someone is gaming in the audience",
-    "Dat6 does loldle.net",
-    "Notification sound",
-    "Disagreement between lecturer and audience",
-    "'What?'",
-    "Awkward silence after lecturer asks question",
-    "Someone drops something",
-    "Shows a video",
-    "Useless slides (Just pictures)",
-    "Lecturer adjusts microphone",
-    "Clemens starts casually talking to Niklas during the lecture",
-    "Clemens scratches his beard",
-    "Someone answers a question with an annoying british accent"
-];
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+    }
 
+    function newBingoCard(text, active) {
+        let newBingoCard = document.createElement("div");
+        if (active) {
+            newBingoCard.setAttribute("class", "bingoCell activeCell");
+        } else {
+            newBingoCard.setAttribute("class", "bingoCell");
+        }
+        newBingoCard.innerText = text;
+        document.getElementById("bingoBody").append(newBingoCard);
+    }
 
-shuffleArray(messages);
-messages.splice(12, 0, "The lecture takes too long");
-for (let i = 0; i < 25; i++) {
-    const box = document.createElement("button");
-    box.className = "box";
+    // Bingo Cards
+    const bingoCards = [
+        "Apple mentioned",
+        "Niklas mentions one of his devices",
+        "Video games mentioned",
+        "Steve Jobs mentioned",
+        "Lecturer gets eye contact with C-Shark",
+        "AI generated image",
+        "'Look at what you can do with AI!'",
+        "'Uuuhhhh'",
+        "Lecturer yaps about something irrelevant to the topic",
+        "Both lecturers speaks at the lecture",
+        "Student goes on an irrelevant tangent",
+        "Niklas wears his white glasses",
+        "A student falls asleep",
+        "Someone leaves during the lecture",
+        "Someone is gaming in the audience",
+        "Dat6 does loldle.net",
+        "Notification sound",
+        "Disagreement between lecturer and audience",
+        "'What?'",
+        "Awkward silence after lecturer asks question",
+        "Someone drops something",
+        "Shows a video",
+        "Useless slides (Just pictures)",
+        "Lecturer adjusts microphone",
+        "Clemens starts casually talking to Niklas during the lecture",
+        "Clemens scratches his beard",
+        "Someone answers a question with an annoying british accent",
+        "Picture of a Cow",
+        "'here is a paper I/We worked on'",
+        "No one raises thier hand when lecturer asks a question",
+        "Someone has their head on the table",
+        "The same student answers three questions in a row",
+        "Name-drops",
+        "The slides are just an image",
+        "PowerPoint with 30+ slides",
+        "He hints that a student should stop talking",
+        "Bloons/Snake is being played",
+        "He elaborates on something he’s already elaborated on in three previous lectures"
+    ];
 
-    const boxText = document.createElement("p");
-    boxText.innerText = messages[i];
+    const centerBingo = "The lecturer speaks for too long";
 
-    if (i == 12) box.classList.toggle("pressed");
+    shuffle(bingoCards);
 
-    box.appendChild(boxText);
-    table.appendChild(box);
+    bingoCards.splice(12, 0, centerBingo);
+    
+    for (let i = 0; i < 25; i++) {
+        let isCenterSquare = (i == 12);
+        newBingoCard(bingoCards[i], isCenterSquare);
+    }
 
-    box.addEventListener("click", e => {
-        console.log(e);
-        e.target.classList.toggle("pressed");
-    })
-}
+    // Grab the container div
+    const bingoBody = document.getElementById("bingoBody");
 
-// https://www.geeksforgeeks.org/javascript/how-to-shuffle-the-elements-of-an-array-in-javascript/
-function shuffleArray(arr) {
-    arr.sort(function (a, b) {
-        return Math.random() - 0.5;
+    // Add event listener for click events
+    bingoBody.addEventListener("click", (event) => {
+        // Find the clicked child element (only if it's a direct child of bingoBody)
+        const clickedElement = event.target.closest("#bingoBody > *");
+
+        if (clickedElement && bingoBody.contains(clickedElement)) {
+            // Get the index of the clicked child
+            const children = Array.from(bingoBody.children);
+            const index = children.indexOf(clickedElement);
+
+            if (index != 12) clickedElement.classList.toggle("activeCell");
+        }
     });
-}
+})();
