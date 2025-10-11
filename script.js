@@ -1,12 +1,12 @@
 const routes = {
   "/": {
-    html: "pages/home.html",
+    html: "/pages/home.html",
     title: "Home",
     description: "Welcome to Cshark!",
-    js: "js/home.js",
+    // js: "/js/home.js",
   },
   "/citater": {
-    html: "pages/citater.html",
+    html: "/pages/citater.html",
     title: "Citater",
     description: "Se vores smukke citater!",
   },
@@ -20,6 +20,7 @@ async function loadPage(path) {
     const res = await fetch(route.html);
     if (!res.ok) throw new Error(`Failed to load ${route.html}`);
     const html = await res.text();
+    console.log(html);
     document.getElementById("content").innerHTML = html;
   } catch (err) {
     document.getElementById(
@@ -97,5 +98,6 @@ function setMeta(name, content) {
 window.addEventListener("popstate", () => loadPage(location.pathname));
 document.addEventListener("click", handleLinkClick);
 
-// Load the initial page
-loadPage(location.pathname);
+document.addEventListener("DOMContentLoaded", () => {
+  loadPage(location.pathname);
+});
