@@ -1,8 +1,3 @@
-document.getElementById('homeButton').addEventListener('click', function(){
-    window.location.href = 'https://cshark.dk/';
-});
-
-
 let flipButton = document.getElementById("flip");
 let forwardButton = document.getElementById("goForward");
 let backButton = document.getElementById("goBack");

@@ -7,17 +7,17 @@ async function loadHeader() {
     const headerHTML = await response.text();
     headerPlaceholder.innerHTML = headerHTML;
 
-    // Highlight current page
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-    headerPlaceholder.querySelectorAll("a").forEach(link => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
-    });
+    const currentPage = document.body.dataset.page; // e.g. set <body data-page="about">
+    headerPlaceholder
+      .querySelectorAll("a[data-page]")
+      .forEach(link => {
+        if (link.dataset.page === currentPage) {
+          link.classList.add("selected");
+        }
+      });
   } catch (err) {
     console.error("Failed to load header:", err);
   }
 }
 
-// Load when DOM is ready
 document.addEventListener("DOMContentLoaded", loadHeader);
