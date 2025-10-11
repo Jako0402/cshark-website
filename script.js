@@ -11,6 +11,13 @@ const routes = {
     description: "Se vores smukke citater!",
     js: "js/quotes.js",
   },
+  "/bingo": {
+    html: "/pages/bingo.html",
+    title: "Bingo",
+    description: "Se vores smukke bingo!",
+    js: "js/bingo.js",
+    css: "css/bingo.css"
+  },
 };
 
 async function loadPage(path) {
@@ -21,7 +28,6 @@ async function loadPage(path) {
     const res = await fetch(route.html);
     if (!res.ok) throw new Error(`Failed to load ${route.html}`);
     const html = await res.text();
-    console.log(html);
     document.getElementById("content").innerHTML = html;
   } catch (err) {
     document.getElementById(
