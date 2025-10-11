@@ -3,12 +3,13 @@ const routes = {
     html: "/pages/home.html",
     title: "Home",
     description: "Welcome to Cshark!",
-    // js: "/js/home.js",
+    js: "/js/home.js",
   },
   "/citater": {
     html: "/pages/citater.html",
     title: "Citater",
     description: "Se vores smukke citater!",
+    js: "js/quotes.js",
   },
 };
 
