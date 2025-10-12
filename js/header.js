@@ -21,35 +21,6 @@ async function loadHeader() {
 
     updateLinkHighlighting();
 
-    // SPA navigation only for internal links
-    headerPlaceholder.querySelectorAll("a[href]").forEach(link => {
-      const href = link.getAttribute("href");
-
-      // Skip external links or ones with target="_blank"
-      if (
-        link.target === "_blank" ||
-        href.startsWith("http") ||
-        href.startsWith("mailto:") ||
-        href.startsWith("#")
-      ) {
-        return; // don't attach SPA handler
-      }
-
-      // Internal SPA link handler
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        history.pushState({}, "", href);
-        loadPage(href);
-        updateLinkHighlighting();
-      });
-    });
-
-    // Handle browser navigation
-    window.addEventListener("popstate", () => {
-      updateLinkHighlighting();
-      loadPage(window.location.pathname);
-    });
-
   } catch (err) {
     console.error("Failed to load header:", err);
   }
