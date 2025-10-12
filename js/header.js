@@ -21,7 +21,7 @@ async function loadHeader() {
 
     updateLinkHighlighting();
 
-    // ✅ SPA navigation only for internal links
+    // SPA navigation only for internal links
     headerPlaceholder.querySelectorAll("a[href]").forEach(link => {
       const href = link.getAttribute("href");
 
