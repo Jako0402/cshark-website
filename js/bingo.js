@@ -60,11 +60,13 @@
         "Someone has their head on the table",
         "The same student answers three questions in a row",
         "Name-drops",
-        "The slides are just an image",
+        "There is only one lecturer present",
         "PowerPoint with 30+ slides",
         "He hints that a student should stop talking",
         "Bloons/Snake is being played",
-        "He elaborates on something he’s already elaborated on in three previous lectures"
+        "He elaborates on something he’s already elaborated on in three previous lectures",
+        "discuss for N minutes",
+        "Meme on slides"
     ];
 
     const centerBingo = "The lecturer speaks for too long";
