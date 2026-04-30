@@ -1,20 +1,7 @@
-# Use a lightweight Node.js image
-FROM node:alpine
+FROM nginx:alpine
 
-# Set the working directory inside the container
-WORKDIR /app
+COPY ./ /usr/share/nginx/html/
 
-# Copy package.json and package-lock.json first (for better caching)
-COPY package*.json ./
+EXPOSE 80
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code
-COPY ./ /app
-
-# Expose the port Vite uses (default is 5173)
-EXPOSE 5173
-
-# Run the Vite development server
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+CMD ["nginx", "-g", "daemon off;"]
