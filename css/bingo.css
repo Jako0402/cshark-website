@@ -1,7 +1,11 @@
-#bingoBody{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: smaller;
+:root{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
 
+
+
+#bingoBody{
     margin-bottom: 100px;
     padding: 2px;
 
