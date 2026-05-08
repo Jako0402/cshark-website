@@ -1,0 +1,77 @@
+
+
+.flashcard-container{
+    position: absolute;
+    
+    top: 300px;
+    left: 100px;
+    border: solid;
+    border-color: rgb(240, 240, 240);
+    height: 500px;
+    width: 800px;
+}
+
+.cardSelector{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: rgb(240, 240, 240);
+    height: 50px;
+    width: 200px;
+}
+
+.selectorButton{
+    position: absolute;
+    background-color: rgb(240, 240, 240);
+    color: rgb(13, 85, 127);
+    border: none;
+    height: 50px;
+    width: 50px;
+
+    font-size: 30px;
+}
+
+.selectorButton:hover{
+    background-color: lightgray;
+}
+
+#goForward{
+right: 0;
+ content: ' \003E';
+}
+
+#goBack{
+right: 1;
+ content: ' \003C';
+}
+
+#flip{
+    right: 0;
+}
+
+#index{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: rgb(13, 85, 127);
+}
+
+
+#card{
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightyellow;
+    height: 350px;
+    width: 700px;
+    color:black;
+    --showingAwnser: 0;
+    place-items: center;
+    font-size: 20px;
+}
+
