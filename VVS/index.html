@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Citater</title>
     <link rel="stylesheet" href="/css/style.css">
-      <script type="text/javascript" src="/js/darkmode.js" defer></script>
-      <script type="text/javascript" src="/js/home.js" defer></script>
       <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
@@ -17,12 +15,21 @@
   <body id="body">
   <div id="header-comp"></div>
   <script>
-      $(document).ready(function () {
+      $(function() {
           $("#header-comp").load("/header.html", function () {
-              initDarkmode();
-              initHome();
+              document.getElementById("header-comp").style.visibility = "visible";
+
+              // Load the scripts AFTER the header exists
+              $.getScript("/js/home.js", function() {
+                  initHome();
+              });
+
+              $.getScript("/js/darkmode.js", function() {
+                  initDarkmode();
+              });
           });
-      });</script>
+      });
+  </script>
   <div class = "main">
       <br>
         <div class="contentPaneSplit">
