@@ -1,10 +1,19 @@
 // Test
-document.getElementById('clickMeButton').addEventListener('click', function() {
-    alert('Bruh!!, you just lost the game');
-});
+function initHome(){
+    const clickMe = document.getElementById('clickMeButton');
+    if (clickMe) {
+        clickMe.addEventListener('click',  ()=> {
+            alert('Bruh!!, you just lost the game');
+        });
+    }
 
-document.getElementById('homeButton').addEventListener('click', function(){
-    window.location.href = 'https://cshark.dk/';
-});
-
+    const home = document.getElementById('homeButton');
+    if (home) {
+        home.addEventListener("click", (e) => {
+            if (e.target.closest("#homeButton")) {
+                window.location.href = "https://cshark.dk/";
+            }
+        });
+    }
+}
 

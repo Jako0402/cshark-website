@@ -6,45 +6,32 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Citater</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="../js/flashcards.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+      <script type="text/javascript" src="/js/darkmode.js" defer></script>
+      <script type="text/javascript" src="/js/home.js" defer></script>
       <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
 
   </head>
   <body id="body">
-    <div class="header">
-      <div class="topHeader">
-          <br>
-          <button id="homeButton" class="button">
-              <svg height="90" width="125" xmlns="http://www.w3.org/2000/svg">
-                  <image height="90" width="125" href="../assets/Cshark.png" />
-              </svg>
-          </button>
-      </div>
-      <div class="botHeader">
-          <br>
-          <nav class="navBar">
-              <ul>
-                  <li><a href="../citater" class="button">Citater</a></li>
-                  <li><a href="https://www.youtube.com/shorts/Ay8lynMZ4mE" class="button">Bangers</a></li>
-                  <li><a href="../bingo" class="button">HCI Bingo</a></li>
-                  <li><a href="../Flashcards" class="button">Flashcards</a></li>
-                  <li><a href="../sange" class="button">C-Sharks Sangtekster</a></li>
-                  <li><a href="../VVS" class="button selected">VVS</a></li>
-              </ul>
-          </nav>
-      </div>
-    </div>
-    <div class = "main">
-        <br>
+  <div id="header-comp"></div>
+  <script>
+      $(document).ready(function () {
+          $("#header-comp").load("/header.html", function () {
+              initDarkmode();
+              initHome();
+          });
+      });</script>
+  <div class = "main">
+      <br>
         <div class="contentPaneSplit">
             <nav class="sideBar">
                 <ul>
-                    <li><a href="../VVS/Uno" class="button">UNO regler</a></li>
+                    <li><a href="/VVS/Uno" class="button">UNO regler</a></li>
                 </ul>
             </nav>
-            <div class="contentPane">
+            <div class="contentPane split">
                 <h1>Varmt Vand Selskab</h1>
                 <p>Vi er en gruppe fra Dat6 der har startet en semi weekly te selvskab vi holder oppe i RC. </p>
                 <p>Alle er velkommne, også selv om de ikke er dat6. Lige pt holder vi det omkring hver fredag kl cirka 13.15, så kom og drik noget te, spise nogle småkager og måske spille kort.
