@@ -7,19 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>C-Shark Sangtekster</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script type="text/javascript" src="/js/darkmode.js" defer></script>
-    <script type="text/javascript" src="/js/home.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body id="body">
-<div id="header-comp"></div>
+<div id="header-comp" style="visibility:hidden"></div>
+
 <script>
-    $(document).ready(function () {
+    $(function() {
         $("#header-comp").load("/header.html", function () {
-            initDarkmode();
-            initHome();
+            document.getElementById("header-comp").style.visibility = "visible";
+
+            // Load the scripts AFTER the header exists
+            $.getScript("/js/home.js", function() {
+                initHome();
+            });
+
+            $.getScript("/js/darkmode.js", function() {
+                initDarkmode();
+            });
         });
-    });</script>
+    });
+</script>
+
 <div class ="main">
     <br>
     <div class="contentPaneSplit">
