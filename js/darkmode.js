@@ -11,13 +11,13 @@ function initDarkmode() {
     }
 
     const enableDarkmode = () => {
-        document.body.classList.add('darkmode')
-        localStorage.setItem('darkmode', 'active')
+        document.documentElement.classList.add('darkmode');
+        localStorage.setItem('darkmode', 'active');
         console.log("hey, who turned off the lights?")
     }
 
     const disableDarkmode = () => {
-        document.body.classList.remove('darkmode')
+        document.documentElement.classList.remove('darkmode')
         localStorage.setItem('darkmode', null)
         console.log("MY EEEEYESSS")
     }

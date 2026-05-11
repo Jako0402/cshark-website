@@ -10,16 +10,14 @@
     font-weight: 400;
 }
 
-.darkmode{
+html.darkmode {
     --base-colour: rgb(25,55,109);
-    --base-variant: rgb(87, 108, 188);
+    --base-variant: rgb(87,108,188);
     --base-accent: rgb(255,255,255);
     --text-colour: rgb(220,220,245);
     --background-colour: rgb(11,36,71);
     --white-colour: rgb(255,255,255);
     --line-colour: rgb(25,55,109);
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
 }
 
 h1 {
