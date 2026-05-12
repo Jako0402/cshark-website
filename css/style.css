@@ -106,7 +106,7 @@ h1 {
     text-decoration: none;
     display: block;
     padding-right: 23px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     text-align: center;
     font-size: 20px;
     border-bottom: 2px solid var(--base-colour);
@@ -272,11 +272,10 @@ h1 {
     padding:0px;
     border-radius:50%;
     background-color:var(--line-colour);
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 25px;
+    margin-top: 19px;
     right: 20%;
 }
 #theme-switch svg{
