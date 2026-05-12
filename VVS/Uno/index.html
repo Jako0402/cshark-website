@@ -5,19 +5,15 @@
     <link rel="shortcut icon" href="/assets/Cshark-text.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>C-Shark Sangtekster</title>
-    <link rel="stylesheet" href="/cshark-website/css/style.css">
+    <title>Uno</title>
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body id="body">
-<div id="header-comp" style="visibility:hidden"></div>
-
+<div id="header-comp"></div>
 <script>
     $(function() {
         $("#header-comp").load("/header.html", function () {
-            document.getElementById("header-comp").style.visibility = "visible";
-
-            // Load the scripts AFTER the header exists
             $.getScript("/js/home.js", function() {
                 initHome();
             });
